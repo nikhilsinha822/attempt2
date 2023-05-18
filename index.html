@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Marck+Script&family=Sen&display=swap"
+      rel="stylesheet"
+    />
+    <title>Invitation</title>
+    <style>
+      /* General Button Style */
+      :root {
+        --background: #1a1e2a;
+        --fontColor: #d5835a;
+        --font1: "Manrope", sans-serif;
+        --font2: "Marck Script", cursive;
+        --font3: "Sen", sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: aliceblue;
+        color: var(--fontColor);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-family: var(--font3);
+      }
+      .button {
+        display: block;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 4rem;
+        height: 3.8rem;
+        margin: 1.5rem;
+        font-size: 0.9rem;
+        color: var(--fontColor);
+        box-sizing: border-box;
+      }
+
+      /* Button Border Style */
+      .button.border {
+        border-top: 2px solid var(--fontColor);
+        border-bottom: 2px solid var(--fontColor);
+      }
+
+      /* Button Ribbon-Outset Border Style */
+      .button.ribbon-outset.border:after,
+      .button.ribbon-outset.border:before {
+        top: 50%;
+        content: " ";
+        height: 2.1rem;
+        width: 2rem;
+        position: absolute;
+        pointer-events: none;
+      }
+      .button.ribbon-outset.border:after {
+        left: 0;
+        margin-top: -31px;
+        transform-origin: 0 0;
+        box-sizing: border-box;
+        border-bottom: 2px solid var(--fontColor);
+        border-left: 2px solid var(--fontColor);
+        transform: rotate(45deg) skew(19deg, 19deg);
+      }
+      .button.ribbon-outset.border:before {
+        right: -32px;
+        margin-top: -31px;
+        transform-origin: 0 0;
+        box-sizing: border-box;
+        border-top: 2px solid var(--fontColor);
+        border-right: 2px solid var(--fontColor);
+        transform: rotate(45deg) skew(19deg, 19deg);
+      }
+      .date {
+        font-size: 2.3rem;
+        line-height: 2rem;
+        font-weight: bolder;
+      }
+      .side-panel {
+        border-top: 2px solid var(--fontColor);
+        border-bottom: 2px solid var(--fontColor);
+        padding: 7px 0;
+        font-size: 0.9rem;
+        color: var(--fontColor);
+        display: block;
+        width: 6rem;
+      }
+      .dateTime {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 100vh;
+        max-width: 450px;
+        background-color: var(--background);
+      }
+      .image {
+        height: 15rem;
+      }
+      .main {
+        font-family: var(--font2);
+        font-size: 4rem;
+      }
+      .content {
+        padding: 20px 10px;
+        font-size: 1.3rem;
+        font-family: var(--font2);
+      }
+      .year {
+        font-family: var(--font3);
+        font-size: 2rem;
+      }
+      .top {
+        height: 20vh;
+      }
+      h3 {
+        color: var(--fontColor);
+      }
+      canvas {
+        display: block;
+        vertical-align: bottom;
+
+      }
+      #particles-js {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" >
+        <div id="particles-js"></div>
+      <div class="top"></div>
+      <div>
+        <h1 class="year">2023</h1>
+        <h1 class="main">Farewell</h1>
+        <p class="content">
+          Let's come together to make these last moments memorable and cherish
+          the time we've shared.
+        </p>
+        <div class="dateTime">
+          <div class="side-panel">SATURDAY</div>
+          <div class="button ribbon-outset border">
+            MAY<br /><span class="date">20</span>
+          </div>
+          <div class="side-panel">12:00 PM</div>
+        </div>
+        <div>
+          <h3>
+            Time Machine<br />
+            Gardens Galleria
+          </h3>
+        </div>
+      </div>
+      <div class="imagebox">
+        <img src="OBJECTS (1).svg" class="image" />
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 355,
+          density: {
+            enable: true,
+            value_area: 789.1476416322727,
+          },
+        },
+        color: {
+          value: "#ffffff",
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000",
+          },
+          polygon: {
+            nb_sides: 5,
+          },
+          image: {
+            src: "img/github.svg",
+            width: 100,
+            height: 100,
+          },
+        },
+        opacity: {
+          value: 0.48927153781200905,
+          random: false,
+          anim: {
+            enable: true,
+            speed: 0.2,
+            opacity_min: 0,
+            sync: false,
+          },
+        },
+        size: {
+          value: 2,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 2,
+            size_min: 0,
+            sync: false,
+          },
+        },
+        line_linked: {
+          enable: false,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 0.2,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200,
+          },
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "bubble",
+          },
+          onclick: {
+            enable: true,
+            mode: "push",
+          },
+          resize: true,
+        },
+        modes: {
+          grab: {
+            distance: 400,
+            line_linked: {
+              opacity: 1,
+            },
+          },
+          bubble: {
+            distance: 83.91608391608392,
+            size: 1,
+            duration: 3,
+            opacity: 1,
+            speed: 3,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+          push: {
+            particles_nb: 4,
+          },
+          remove: {
+            particles_nb: 2,
+          },
+        },
+      },
+      retina_detect: true,
+    });
+  </script>
+</html>
