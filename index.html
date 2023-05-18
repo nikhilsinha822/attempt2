@@ -33,7 +33,6 @@
         text-align: center;
         justify-content: center;
         font-family: var(--font3);
-        overflow-x: hidden;
       }
       .button {
         display: block;
@@ -114,19 +113,26 @@
         min-height: 100vh;
         max-width: 450px;
         background-color: var(--background);
+        overflow: hidden;
       }
       .image {
-        max-height: 15rem;
+        width: 110%;
+        margin: 0;
+      }
+      .imagebox{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
       }
       .main {
         font-family: var(--font2);
         font-size: 4rem;
       }
       .content {
-        padding: 20px 10px;
+        margin: 20px 10px;
         font-size: 1.3rem;
-        font-family: var(--font2); 
-        width: 90vw;
+        font-family: var(--font2);
       }
       .year {
         font-family: var(--font3);
